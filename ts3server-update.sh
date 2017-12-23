@@ -71,5 +71,13 @@ fi
 cd $TS3SERVER_DIR
 chown -R teamspeak3-user:teamspeak3-user $TS3SERVER_DIR
 #./ts3server_linux_amd64 inifile=ts3server.ini > /dev/null 2>&1 & # for testing only
-/etc/init.d/ts3 start
+if [ "$#" -gt "1" ]
+then
+	if [ "$2" -eq "norun" ]
+	then
+		echo "[?] Run TeamSpeak3 Server manually"
+	else
+		/etc/init.d/ts3 start
+	fi
+fi
 #./ts3server_startscript.sh start # for testing only
