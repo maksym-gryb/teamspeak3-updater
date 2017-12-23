@@ -1,4 +1,6 @@
 #!/bin/bash
+# TeamSpeak3 Server Setup - Unofficial
+# version 0.1
 
 required_packages="mariadb-client mariadb-server libmariadb2"
 
